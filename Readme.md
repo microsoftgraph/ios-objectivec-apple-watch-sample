@@ -4,6 +4,8 @@
 
 The scenario revolves around on how we all sometimes get into a meeting where we don't know who somebody is, and we'd like to get a little more intel on them in a discreet manner. From the Apple Watch you can pull up the list of meeting attendees and view profile information such as their job title, manager, direct reports, and all associated profile pictures.
 
+![Watch](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/WatchScene.jpg)
+
 
 > Note: This sample is just an idea, and meant solely to open up the possibilities for integrating Microsoft Graph into a number of different scenarios. As always, when constructing your own app in your organization you should ensure your own guidelines around security (authentication and app permissions) and app design are implemented. Also please refer to Apple's [watchOS Human interface Guidelines](https://developer.apple.com/watch/human-interface-guidelines/).
 
@@ -52,7 +54,9 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 		NSString * const kAuthority   = @"https://login.microsoftonline.com/common";
 		NSString * const kResourceId  = @"https://graph.microsoft.com";
 
-5. Run the sample and ensure the target is set to the WatchKit App iPhone/Apple Watch scheme. You'll be asked to connect/authenticate to a work mail account. Once authenticated the phone will immediately try to retrieve recent events from the logged in user's calendar. From there you can drill down into the attendees list, find somebody of interest, and view profile specifics: job title, manager, direct reports, and profile pictures.
+5. Run the sample and ensure the target is set to the WatchKit App iPhone/Apple Watch scheme. You'll be asked to connect/authenticate to a work mail account.
+![Authentication](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/Authentication.jpg)
+6. Once authenticated the phone will immediately try to retrieve recent events from the logged in user's calendar. From there you can drill down into the attendees list, find somebody of interest, and view profile specifics: job title, manager, direct reports, and profile pictures.
 
 ##Code of Interest
 
