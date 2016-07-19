@@ -54,7 +54,9 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 		NSString * const kAuthority   = @"https://login.microsoftonline.com/common";
 		NSString * const kResourceId  = @"https://graph.microsoft.com";
 
-5. Run the sample and ensure the target is set to the WatchKit App iPhone/Apple Watch scheme. You'll be asked to connect/authenticate to a work mail account.
+5. Run the sample and ensure the target is set to the WatchKit App iPhone/Apple Watch scheme.
+![Target](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/target.jpg)
+6. You'll be asked to connect/authenticate to a work mail account.
 ![Authentication](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/Authentication.jpg)
 6. Once authenticated the phone will immediately try to retrieve recent events from the logged in user's calendar. From there you can drill down into the attendees list, find somebody of interest, and view profile specifics: job title, manager, direct reports, and profile pictures.
 
