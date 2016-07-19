@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KO4-Cc-CWw">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="pkg-lZ-5yQ">
+            <objects>
+                <controller id="KO4-Cc-CWw" customClass="InterfaceController">
+                    <items>
+                        <separator alignment="left" id="3h1-4s-SHD">
+                            <color key="color" red="0.040840808870000002" green="1" blue="0.65644346610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <label alignment="center" text="Select Meeting" textAlignment="center" id="qWj-wV-aah">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
+                        </label>
+                        <label alignment="center" text="Retrieving..." textAlignment="center" id="gPG-ZL-HGA"/>
+                        <separator alignment="left" id="d87-Fc-bGh">
+                            <color key="color" red="0.040840808870000002" green="1" blue="0.65644346610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <table alignment="left" id="oEq-TS-mgW">
+                            <items>
+                                <tableRow identifier="eventRow" id="eyo-LR-W1y" customClass="EventTableRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="goY-xN-HID">
+                                        <items>
+                                            <label width="125.5" alignment="left" text="Events" numberOfLines="2" id="vgO-kR-BVx">
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="eventSubject" destination="vgO-kR-BVx" id="xl7-qC-SAi"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="eventTable" destination="oEq-TS-mgW" id="0g2-g0-u1H"/>
+                        <outlet property="loadingLabel" destination="gPG-ZL-HGA" id="Qvd-I3-Bb2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="305" y="370"/>
+        </scene>
+        <!--profileController-->
+        <scene sceneID="xcJ-jC-Lfr">
+            <objects>
+                <controller identifier="profileController" id="goP-eA-rrb" customClass="ProfileController">
+                    <items>
+                        <separator alignment="left" id="rD6-k1-hkb">
+                            <color key="color" red="0.040840808870000002" green="1" blue="0.65644346610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <label width="125.5" alignment="center" text="Attendee Name" textAlignment="center" numberOfLines="2" id="vsI-5G-Z14">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                        </label>
+                        <label alignment="center" text="Retrieving..." textAlignment="center" id="V45-bu-5eo"/>
+                        <label width="125.5" alignment="center" textAlignment="center" id="ZjO-9E-Ums">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="12"/>
+                        </label>
+                        <separator alignment="left" id="pJc-Pe-5LL">
+                            <color key="color" red="0.078375426339999998" green="1" blue="0.50598204290000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <label width="135.5" alignment="center" text="Manager" textAlignment="center" id="fCp-NQ-uXW">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
+                        </label>
+                        <separator alignment="left" id="FJU-iS-xAv">
+                            <color key="color" red="0.2932781733" green="0.95230422130000003" blue="0.049954140190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <label alignment="left" text="Directs" id="GDq-CH-TXn">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
+                        </label>
+                        <table alignment="left" id="T8b-Ei-4qe">
+                            <items>
+                                <tableRow identifier="directsRow" id="2Nf-WM-bhN" customClass="DirectsTableRowController">
+                                    <group key="rootItem" width="1" alignment="left" spacing="6" id="PVv-wY-UOQ">
+                                        <items>
+                                            <imageView width="35" height="35" alignment="left" verticalAlignment="center" image="userAccount" id="ig2-dX-V94"/>
+                                            <label alignment="left" verticalAlignment="center" text="Directs" id="HIg-zw-oqC">
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="2" right="2" top="2" bottom="2"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="directsName" destination="HIg-zw-oqC" id="cyx-n8-8xC"/>
+                                        <outlet property="profilePicture" destination="ig2-dX-V94" id="jfr-3L-GG8"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="attendeeName" destination="vsI-5G-Z14" id="A19-ar-Yoe"/>
+                        <outlet property="directs" destination="GDq-CH-TXn" id="W70-7R-AMT"/>
+                        <outlet property="directsTable" destination="T8b-Ei-4qe" id="goS-Ud-RUs"/>
+                        <outlet property="jobTitle" destination="ZjO-9E-Ums" id="QHg-oX-2Vi"/>
+                        <outlet property="loadingLabel" destination="V45-bu-5eo" id="Xa0-KD-TP0"/>
+                        <outlet property="managerName" destination="fCp-NQ-uXW" id="e9z-rR-uE5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="766" y="370"/>
+        </scene>
+        <!--attendeeListController-->
+        <scene sceneID="vQf-cP-hgF">
+            <objects>
+                <controller identifier="attendeeListController" id="K8p-N9-7vR" customClass="AttendeeListController">
+                    <items>
+                        <separator alignment="left" id="Cu6-Q0-g9X">
+                            <color key="color" red="0.040840808870000002" green="1" blue="0.65644346610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <label width="93.5" height="26.5" alignment="center" text="Attendees" textAlignment="center" id="XVd-F7-4qV">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
+                        </label>
+                        <label height="20.5" alignment="center" text="Retrieving..." textAlignment="center" numberOfLines="0" id="rPZ-sh-WF4"/>
+                        <separator alignment="left" id="hOu-Q5-te3">
+                            <color key="color" red="0.040840808870000002" green="1" blue="0.65644346610000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <table alignment="left" id="1Va-05-MoV" userLabel="AttendeesListTable">
+                            <items>
+                                <tableRow identifier="attendeeRow" id="z6v-LM-vtX" userLabel="AttendeeListController" customClass="AttendeeListRowController">
+                                    <group key="rootItem" width="1" alignment="left" id="lkU-Yp-Gid">
+                                        <items>
+                                            <imageView width="35" height="35" alignment="left" verticalAlignment="center" image="userAccount" id="oNR-kq-O7n"/>
+                                            <label width="86.5" alignment="left" verticalAlignment="center" text="Attendee" textAlignment="left" id="aiC-q4-1G5">
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="attendeeLabel" destination="aiC-q4-1G5" id="0fI-fT-tEZ"/>
+                                        <outlet property="profilePicture" destination="oNR-kq-O7n" id="lwQ-Cx-6xm"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="attendeeListTable" destination="1Va-05-MoV" id="VTV-5O-Y8E"/>
+                        <outlet property="loadingLabel" destination="rPZ-sh-WF4" id="dYq-0y-qZg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="527" y="370"/>
+        </scene>
+    </scenes>
+</document>
