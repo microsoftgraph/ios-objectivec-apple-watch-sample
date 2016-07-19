@@ -33,7 +33,7 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 8.	On the **Application information** page, specify a Redirect URI, for this example, you can specify http://localhost, and then select the check box in the lower-right hand corner of the page. Remember this value for the section **Running this sample in Xcode**.
 9.	Once the application has been successfully added, you will be taken to the quick start page for the application. Select Configure in the top menu.
 10.	Under **permissions to other applications**, select **Microsoft Graph** and add the following permissions: **Sign in and read user profile**, **Read all users' full profiles**, and **Read user calendars**.
-11.	Copy the values for **Client ID** an **Redirect URIS** on the **Configure** page. Remember this value for the section **Getting the ClientID and RedirectUri into the project**.
+11.	Copy the values for **Client ID** an **Redirect URIS** on the **Configure** page. Remember this value for the section **Running this sample in Xcode**.
 12.	Select **Save** in the bottom menu.
 
 ## Running this sample in Xcode
