@@ -46,7 +46,7 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
   	 For more information, see **Using CocoaPods** in [Additional Resources](#AdditionalResources)
 
 3. Open **iOS-ObjectiveC-MicrosoftGraph-Watch.xcworkspace**
-4. Open **AuthenticationManager.m**. You'll see that the **ClientID** and **Redirect URI** from the registration process can be added to the top of the file:
+4. Open **ViewController.m**. You'll see that the **ClientID** and **Redirect URI** from the registration process can be added to the top of the file:
 
     	// You will set your application's clientId and redirect URI.
 		NSString * const kRedirectUri = @"ENTER_REDIRECT_URI_HERE";
