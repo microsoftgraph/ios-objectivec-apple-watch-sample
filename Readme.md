@@ -12,7 +12,7 @@ The scenario revolves around on how we all sometimes get into a meeting where we
 Finally, this a work in progress and we'd love it if you could contribute to, and improve upon it, as needed. **Who Are You?** is a WatchOS 2.2 sample that uses the Active Directory Authentication Library for iOS for auth, and the Microsoft Graph endpoint for gathering user profile specifics. 
 
 ## Prerequisites
-* [Xcode](https://developer.apple.com/xcode/downloads/) from Apple
+* [Xcode](https://developer.apple.com/xcode/downloads/) from Apple (tested on version 7.3.1 with support for WatchOS 2.2.
 * Installation of [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)  as a dependency manager.
 * A Microsoft work account such as Office 365.  You can sign up for [an Office 365 Developer subscription](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=14b845d0-938c-45af-b061-f798fbb4d170&lcid=1033) that includes the resources that you need to start building Office 365 apps.
 
