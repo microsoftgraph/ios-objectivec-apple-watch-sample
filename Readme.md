@@ -58,9 +58,10 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 ![Target](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/target.jpg)
 6. You'll be asked to connect/authenticate to a work mail account.
 ![Authentication](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/Authentication.jpg)
-6. Once authenticated the phone will immediately try to retrieve recent events from the logged in user's calendar. From there you can drill down into the attendees list, find somebody of interest, and view profile specifics: job title, manager, direct reports, and profile pictures.
+6. Once authenticated the phone will immediately try to retrieve recent events from the logged in user's calendar. You will see a **Retrieving...** indicator from the watch appear. From there you can drill down into the attendees list, find somebody of interest, and view profile specifics: job title, manager, direct reports, and profile pictures.
+> Note: See the issue regarding the access token below in the **Known issues** section.
 
-##Code of Interest
+##Code of interest
 
 **Phone**
 
@@ -76,7 +77,7 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 
 
 ##Known issues
-At this time the access token passed between the phone and the watch is not being refreshed at expiration. For now, once it expires, you'll have to log-in again.
+Again this project is a work in progress, and at this time the access token passed between the phone and the watch is not being refreshed at expiration. For now, once it expires, you'll have to log-in again. On the simulator you can simply redeploy the app, but if deploying to a watch the app will hang after it expires. You can either redeploy to the device or shut down the app in the background and relaunch (open app, press side button until the power menu appears, hold down the side button again until that menu disappears, restart app).
 
 ## Questions and comments
 
