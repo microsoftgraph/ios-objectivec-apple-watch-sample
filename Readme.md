@@ -7,7 +7,7 @@ The scenario revolves around on how we all sometimes get into a meeting where we
 ![Watch](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/WatchScene.jpg)
 
 
-> Note: This sample is just an idea, and meant solely to open up the possibilities for integrating Microsoft Graph into a number of different scenarios. As always, when constructing your own app in your organization you should ensure your own guidelines around security (authentication and app permissions) and app design are implemented. Also please refer to Apple's [watchOS Human interface Guidelines](https://developer.apple.com/watch/human-interface-guidelines/).
+> Note: This sample is just an idea, and meant solely to open up the possibilities for integrating Microsoft Graph into a number of different scenarios. As always, when constructing your own app in your organization, you should ensure your own guidelines around security (authentication and app permissions) and app design are implemented. Also, please refer to Apple's [watchOS Human interface Guidelines](https://developer.apple.com/watch/human-interface-guidelines/).
 
 Finally, this a work in progress and we'd love it if you could contribute to, and improve upon it, as needed. **Who Are You?** is a WatchOS 2.2 sample that uses the Active Directory Authentication Library for iOS for auth, and the Microsoft Graph endpoint for gathering user profile specifics. 
 
@@ -45,7 +45,7 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 
   	 For more information, see **Using CocoaPods** in [Additional Resources](#AdditionalResources)
 
-3. Open **iOS-ObjectiveC-MicrosoftGraph-Watch.xcworkspace**
+3. Open **iOS-ObjectiveC-MicrosoftGraph-WatchSample.xcworkspace**
 4. Open **ViewController.m**. You'll see that the **ClientID** and **Redirect URI** from the registration process can be added to the top of the file:
 
     	// You will set your application's clientId and redirect URI.
@@ -59,7 +59,8 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 6. You'll be asked to connect/authenticate to a work mail account.
 ![Authentication](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/Authentication.jpg)
 6. Once authenticated the phone will immediately try to retrieve recent events from the logged in user's calendar. You will see a **Retrieving...** indicator from the watch appear. From there you can drill down into the attendees list, find somebody of interest, and view profile specifics: job title, manager, direct reports, and profile pictures.
-> Note: See the issue regarding the access token below in the **Known issues** section.
+
+	> Note: See the issue regarding the access token below in the **Known issues** section.
 
 ##Code of interest
 
@@ -69,7 +70,7 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 
 **Watch**
 
-*InterfaceController* - In this controller, **session:didReceiveMessageData:replyHandler:** is implemented to receive the access token from the phone, from there it is stored in the **Network\NetworkManager.m** This controller will then make a call out to the Microsoft Graph service to retrieve the logged in user's calendar events (**getEvents**) and display them. User selects a meeting and the calendar event object is passed to the **AttendeeListController**.
+*InterfaceController* - In this controller, **session:didReceiveMessageData:replyHandler:** is implemented to receive the access token from the phone, from there it is stored in the **Network\NetworkManager.m** This controller will then make a call out to the Microsoft Graph service to retrieve the logged in user's calendar events (**getEvents**) and display them. User then selects a meeting and the calendar event object is passed to the **AttendeeListController**.
 
 *AttendeeListController* - This controller displays the list of meeting attendees along with their profile pictures. In the call to Microsoft Graph (**getEventAttendees**), an Attendee object is created/initialized with the attendee name, and then passed over to the **ProfileController** when the user selects them. Also, a helper class **ProfilePictureHelper** calls **getPhotoForAttendee:(Attendee *) withcompletion:** to retrieve all meeting participants' profile pictures.
   
@@ -77,7 +78,7 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 
 
 ##Known issues
-Again this project is a work in progress, and at this time the access token passed between the phone and the watch is not being refreshed at expiration. For now, once it expires, you'll have to log-in again. On the simulator you can simply redeploy the app, but if deploying to a watch the app will hang after it expires. You can either redeploy to the device or shut down the app in the background and relaunch (open app, press side button until the power menu appears, hold down the side button again until that menu disappears, restart app).
+Again this project is a work in progress, and at this time the access token passed between the phone and the watch is not being refreshed at expiration. For now, once it expires, you'll have to log-in again. On the simulator you can simply redeploy the app, but if deploying to a watch, the app will hang after it expires. You can either redeploy to the device, or shut down the app in the background and relaunch (open app, press side button until the power menu appears, hold down the side button again until that menu disappears, restart app).
 
 ## Questions and comments
 
