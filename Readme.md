@@ -56,9 +56,9 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 
 5. Run the sample and ensure the target is set to the WatchKit App iPhone/Apple Watch scheme.
 ![Target](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/target.jpg)
-6. You'll be asked to connect/authenticate to a work mail account.
+6. Make sure the iOS app and the watch app simulators are visible. On the phone app, click *Connect* and you'll be asked to authenticate to a work mail account. Provide your credentials.
 ![Authentication](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/Authentication.jpg)
-6. Once authenticated the phone will immediately try to retrieve recent events from the logged in user's calendar. You will see a **Retrieving...** indicator from the watch appear. From there you can drill down into the attendees list, find somebody of interest, and view profile specifics: job title, manager, direct reports, and profile pictures.
+6. Once authenticated, the watch app will immediately try to retrieve recent events from the logged in user's calendar. You will see a **Retrieving...** indicator on the watch appear. From there you can drill down into the attendees list, find somebody of interest, and view profile specifics: job title, manager, direct reports, and profile pictures.
 
 	> Note: Again, you need to have a meeting created in your Office 365 tenant, licensed attendees added, and some of their profile specifcs entered for the app to return anything. Ensure that one is created with their display name and job title in Office 365 admin console. Direct reports and manager can be assigned in the Exchange admin center (recipients/mailboxes) in Office 365. Also, see the issue regarding the access token below in the **Known issues** section.
 
