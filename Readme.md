@@ -14,7 +14,7 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 ## Prerequisites
 * [Xcode](https://developer.apple.com/xcode/downloads/) from Apple (tested on version 7.3.1 with support for WatchOS 2.2.
 * Installation of [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)  as a dependency manager.
-* A Microsoft work account such as Office 365.  You can sign up for [an Office 365 Developer subscription](https://aka.ms/devprogramsignup) that includes the resources that you need to start building Office 365 apps.
+* A Microsoft work account such as Office 365 that supports Microsoft Exchange.  You can sign up for an [Office 365 Enterprise trial subscription](https://products.office.com/business/office-365-enterprise-e5-business-softwarep) that includes the resources that you need to start building Office 365 apps. This also includes 25 licenses to apply to users.
 
      > Note: This sample relies on having a licensed organizational accounts with limited profile information filled out such as an employee's job title, display name, manager, directs, and profile picture. If this information is not populated it won't show up in the app.    
 * A Microsoft Azure tenant to register your application. Azure Active Directory provides identity services that applications use for authentication and authorization. A trial subscription can be acquired here: [Microsoft Azure](https://account.windowsazure.com/SignUp).
