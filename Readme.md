@@ -82,7 +82,7 @@ Again this project is a work in progress, and at this time the access token pass
 
 ## Questions and comments
 
-We'd love to get your feedback about the **Who are you** app. You can send your questions and suggestions to us in the [Issues]() section of this repository.
+We'd love to get your feedback about the **Who are you** app. You can send your questions and suggestions to us in the [Issues](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/issues) section of this repository.
 
 Questions about Microsoft Graph development in general should be posted to [Stack Overflow](http://stackoverflow.com/questions/tagged/Office365+API). Make sure that your questions or comments are tagged with [Office365] and [MicrosoftGraph].
 
