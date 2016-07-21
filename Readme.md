@@ -24,7 +24,7 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 
 ## Register your app with Microsoft Azure
 1.	Sign in to the [Azure Management Portal](https://manage.windowsazure.com), using your Azure AD credentials.
-2.	Select **Active Directory** on the left menu, then select the directory for your Office 365 developer site.
+2.	Choose **All Items** on the left menu, then select the directory for your Office 365 developer site.
 3.	On the top menu, select **Applications**.
 4.	Select **Add** from the bottom menu.
 5.	On the **What do you want to do** page, select **Add an application my organization is developing**.
