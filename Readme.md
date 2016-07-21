@@ -16,7 +16,7 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 * Installation of [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)  as a dependency manager.
 * A Microsoft work account such as Office 365.  You can sign up for [an Office 365 Developer subscription](https://aka.ms/devprogramsignup) that includes the resources that you need to start building Office 365 apps.
 
-     > Note: This sample relies on having an organizational account with limited profile information filled out such as an employee's job title and profile picture. If this information is not populated it won't show up in the app.    
+     > Note: This sample relies on having a licensed organizational account with limited profile information filled out such as an employee's job title and profile picture. If this information is not populated it won't show up in the app.    
 * A Microsoft Azure tenant to register your application. Azure Active Directory provides identity services that applications use for authentication and authorization. A trial subscription can be acquired here: [Microsoft Azure](https://account.windowsazure.com/SignUp).
 
 **Important**: You will also need to ensure your Azure subscription is bound to your Office 365 tenant. To do this, see the Adding a new directory section in the Active Directory team's blog post, [Creating and Managing Multiple Windows Azure Active Directories](http://blogs.technet.com/b/ad/archive/2013/11/08/creating-and-managing-multiple-windows-azure-active-directories.aspx). You can also read [Set up Azure Active Directory access for your Developer Site](http://msdn.microsoft.com/office/office365/howto/setup-development-environment#bk_CreateAzureSubscription) for more information.
@@ -60,7 +60,7 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 ![Authentication](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/Authentication.jpg)
 6. Once authenticated the phone will immediately try to retrieve recent events from the logged in user's calendar. You will see a **Retrieving...** indicator from the watch appear. From there you can drill down into the attendees list, find somebody of interest, and view profile specifics: job title, manager, direct reports, and profile pictures.
 
-	> Note: Again, you need to have a meeting created in your Office 365 tenant, attendees added, and some of their profile specifcs entered for the app to return anything. Ensure that one is created with their display name and job title in Office 365 admin console. Direct reports and manager can be assigned in the Exchange admin center (recipients/mailboxes) in Office 365. Also, see the issue regarding the access token below in the **Known issues** section.
+	> Note: Again, you need to have a meeting created in your Office 365 tenant, licensed attendees added, and some of their profile specifcs entered for the app to return anything. Ensure that one is created with their display name and job title in Office 365 admin console. Direct reports and manager can be assigned in the Exchange admin center (recipients/mailboxes) in Office 365. Also, see the issue regarding the access token below in the **Known issues** section.
 
 ##Code of interest
 
