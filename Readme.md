@@ -2,7 +2,7 @@
 
 **Who are you?** is a watch sample that lets you find out more about a colleague in a meeting. It's meant to be a fun take on how you can intersect a wearable like an Apple Watch with Microsoft Graph, a unified endpoint for accessing data, relationships and insights that come from the Microsoft Cloud.
 
-The scenario revolves around on how we all sometimes get into a meeting where we don't know who somebody is, and we'd like to get a little more intel on them in a discreet manner. From the Apple Watch you can pull up the list of meeting attendees and view profile information such as their job title, manager, direct reports, and all associated profile pictures.
+The scenario revolves around on how we can get into a meeting where we don't know who somebody is, and we'd like to get a little more intel on them in a discreet manner. From the Apple Watch you can pull up the list of meeting attendees and view profile information such as their job title, manager, direct reports, and all associated profile pictures.
 
 ![Watch](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/WatchScene.jpg)
 
