@@ -30,11 +30,15 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 5.	On the **What do you want to do** page, select **Add an application my organization is developing**.
 6.	On the **Tell us about your application** page, specify **iOS-Watch** for the application name and select **NATIVE CLIENT APPLICATION** for type.
 7.	Select the arrow icon on the lower-right corner of the page.
-8.	On the **Application information** page, specify a Redirect URI, for this example, you can specify http://localhost, and then select the check box in the lower-right hand corner of the page. Remember this value for the section **Running this sample in Xcode**.
-9.	Once the application has been successfully added, you will be taken to the quick start page for the application. Select Configure in the top menu.
-10.	Under **permissions to other applications**, select **Microsoft Graph** and add the following permissions: **Sign in and read user profile**, **Read all users' full profiles**, and **Read user calendars**.
-11.	Copy the values for **Client ID** an **Redirect URIS** on the **Configure** page. Remember this value for the section **Running this sample in Xcode**.
-12.	Select **Save** in the bottom menu.
+8.	On the **Application information** page, specify a **Redirect URI**. for this example, you can specify **https://localhost**, and then select the **check mark icon** in the lower-right hand corner of the page. Remember this value for the section **Running this sample in Xcode**.
+9.	Once the application has been successfully added, you will be taken to the quick start page for the application. Select **Configure** in the top menu.
+10. Scroll to the section entitled **Permissions to Other Applications**.
+11. Click **Add application**.
+12. Click **Microsoft Graph**. 
+13. Click **the check mark icon** at the bottom of the page.
+14. From **Delegated Permissions** select **Sign in and read user profile**, **Read all users' full profiles**, and **Read user calendars**.
+15. Click the **Save** button at the bottom of the page.
+16.	Copy the values for **Client ID** and **Redirect URIS** on the **Configure** page. Remember these values for the section **Running this sample in Xcode**.
 
 ## Running this sample in Xcode
 
