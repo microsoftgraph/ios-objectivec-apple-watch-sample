@@ -21,24 +21,21 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
 
 **Important**: You will also need to ensure your Azure subscription is bound to your Office 365 tenant. To do this, see the Adding a new directory section in the Active Directory team's blog post, [Creating and Managing Multiple Windows Azure Active Directories](http://blogs.technet.com/b/ad/archive/2013/11/08/creating-and-managing-multiple-windows-azure-active-directories.aspx). You can also read [Set up Azure Active Directory access for your Developer Site](http://msdn.microsoft.com/office/office365/howto/setup-development-environment#bk_CreateAzureSubscription) for more information.
 
-
 ## Register your app with Microsoft Azure
-1.	Sign in to the [Azure Management Portal](https://manage.windowsazure.com), using your Azure AD credentials.
-2.	Choose **All Items** on the left menu, then select the directory for your Office 365 developer site.
-3.	On the top menu, select **Applications**.
-4.	Select **Add** from the bottom menu.
-5.	On the **What do you want to do** page, select **Add an application my organization is developing**.
-6.	On the **Tell us about your application** page, specify **iOS-Watch** for the application name and select **NATIVE CLIENT APPLICATION** for type.
-7.	Select the arrow icon on the lower-right corner of the page.
-8.	On the **Application information** page, specify a **Redirect URI**. for this example, you can specify **https://localhost**, and then select the **check mark icon** in the lower-right hand corner of the page. Remember this value for the section **Running this sample in Xcode**.
-9.	Once the application has been successfully added, you will be taken to the quick start page for the application. Select **Configure** in the top menu.
-10. Scroll to the section entitled **Permissions to Other Applications**.
-11. Click **Add application**.
-12. Click **Microsoft Graph**. 
-13. Click **the check mark icon** at the bottom of the page.
-14. From **Delegated Permissions** select **Sign in and read user profile**, **Read all users' full profiles**, and **Read user calendars**.
-15. Click the **Save** button at the bottom of the page.
-16.	Copy the values for **Client ID** and **Redirect URIS** on the **Configure** page. Remember these values for the section **Running this sample in Xcode**.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+2. On the top bar, click on your account and under the **Directory** list, choose the Active Directory tenant where you wish to register your application.
+3. Click on **More Services** in the left hand nav, and choose **Azure Active Directory**.
+4. Click on **App registrations** and choose **Add**.
+5. Enter a friendly name for the application such as **Watch Project**, select **Native** as the Application Type. For the **Redirect URI**, enter **https://localhost**. Click on **Create** to create the application.
+6. While still in the Azure portal, choose your application, click on **Settings** and choose **Properties**.
+7. Find the **Application ID** value and copy it to the clipboard. This is the client ID value we'll add to the project later.
+8. Configure **Permissions** for your application - in the **Settings** menu, choose the **Required permissions** section, click on **Add**, then **Select an API**, and type "Microsoft Graph" in the text box. Then, click on **Select Permissions** and select:
+   * Read all users' full profiles
+   * Sign in and read user profile
+   * Read user calendars
+
+9. Click **Select**.
+
 
 ## Running this sample in Xcode
 
@@ -50,7 +47,7 @@ Finally, this a work in progress and we'd love it if you could contribute to, an
   	 For more information, see **Using CocoaPods** in [Additional Resources](#AdditionalResources)
 
 3. Open **iOS-ObjectiveC-MicrosoftGraph-WatchSample.xcworkspace**
-4. Open **ViewController.m**. You'll see that the **ClientID** and **Redirect URI** from the registration process can be added to the top of the file:
+4. Open **ViewController.m**. You'll see that the **ClientID** (the application id you received from the prerequisites section) and **Redirect URI** from the registration process can be added to the top of the file:
 
     	// You will set your application's clientId and redirect URI.
 		NSString * const kRedirectUri = @"ENTER_REDIRECT_URI_HERE";
