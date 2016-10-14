@@ -1,4 +1,4 @@
-# ¿Quién es usted? - Ejemplo de Microsoft Graph y de Apple Watch
+# <a name="who-are-you?---microsoft-graph-and-apple-watch-sample"></a>¿Quién es usted? - Ejemplo de Microsoft Graph y de Apple Watch
 
 **¿Quién es usted?** es un ejemplo de reloj que le permite obtener más información acerca de un compañero en una reunión. Está diseñado para indicar de forma divertida cómo puede interactuar un dispositivo portátil como un Apple Watch con Microsoft Graph, un punto de conexión unificado para acceder a los datos, las relaciones y los datos que proceden de Microsoft Cloud.
 
@@ -11,7 +11,7 @@ El escenario gira alrededor de cómo podemos acceder a una reunión donde no con
 
 Por último, este es un trabajo en curso y nos encantaría que pudiese colaborar y ayudar a mejorarlo según sea necesario. **¿Quién es usted?** es un ejemplo de WatchOS 2.2 que usa la biblioteca de autenticación de Active Directory para iOS para la autenticación y el punto de conexión de Microsoft Graph para recopilar detalles del perfil de usuario. 
 
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 * [Xcode](https://developer.apple.com/xcode/downloads/) de Apple (probado en la versión 7.3.1 con compatibilidad para WatchOS 2.2.
 * Instalación de [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html) como administrador de dependencias.
 * Una cuenta profesional de Microsoft como Office 365 que admite Microsoft Exchange.  Puede registrarse para [una suscripción de prueba a Office 365 Enterprise](https://products.office.com/en-us/business/office-365-enterprise-e5-business-software), que incluye los recursos que necesita para comenzar a crear aplicaciones de Office 365. También incluye 25 licencias para aplicar a los usuarios.
@@ -21,36 +21,33 @@ Por último, este es un trabajo en curso y nos encantaría que pudiese colaborar
 
 **Importante**: También necesitará asegurarse de que su suscripción a Azure esté enlazada a su inquilino de Office 365. Para ello, consulte la sección Agregar un nuevo directorio en la publicación del blog del equipo de Active Directory [Crear y administrar varios directorios de Windows Azure Active](http://blogs.technet.com/b/ad/archive/2013/11/08/creating-and-managing-multiple-windows-azure-active-directories.aspx). También puede leer [Configurar el acceso a Azure Active Directory para su sitio para desarrolladores](http://msdn.microsoft.com/office/office365/howto/setup-development-environment#bk_CreateAzureSubscription) para obtener más información.
 
+## <a name="register-your-app-with-microsoft-azure"></a>Registre su aplicación con Microsoft Azure
+1. Inicie sesión en el [portal de Azure](https://portal.azure.com/)
+2. En la barra superior, haga clic en su cuenta y, en la lista de **directorio**, elija el inquilino de Active Directory donde desee registrar la aplicación.
+3. Haga clic en **Más servicios**, en el navegador de la izquierda, y elija **Azure Active Directory**.
+4. Haga clic en **Registros de aplicación** y elija **Agregar**.
+5. Escriba un nombre descriptivo para la aplicación, como **Proyecto de inspección**, y seleccione **Nativo** como tipo de aplicación. Para la **URI de redirección**, introduzca **https://localhost**. Haga clic en **Crear** para crear la aplicación.
+6. Sin salir del portal de Azure, elija la aplicación, haga clic en **Configuración** y seleccione **Propiedades**.
+7. Encuentre el valor del **identificador de la aplicación** y cópielo en el portapapeles. Se trata del valor de Id. de cliente que agregaremos al proyecto más adelante.
+8. Configure los **Permisos** de su aplicación: en el menú **Configuración** menú, elija la sección **Permisos necesarios**, haga clic en **Agregar** y, a continuación, en **Seleccionar API**, y escriba "Microsoft Graph" en el cuadro de texto. A continuación, haga clic en **Seleccionar permisos** y elija:
+   * Leer los perfiles completos de todos los usuarios
+   * Iniciar sesión y leer el perfil del usuario
+   * Leer los calendarios del usuario
 
-## Registre su aplicación con Microsoft Azure
-1.  Inicie sesión en el [Portal de administración de Azure](https://manage.windowsazure.com) usando las credenciales de Azure AD.
-2.  Seleccione **Todos los elementos** en el menú de la izquierda y, después, seleccione el directorio para el sitio para desarrolladores de Office 365.
-3.  En el menú superior, seleccione **Aplicaciones**.
-4.  Seleccione **Agregar** desde el menú inferior.
-5.  En la página **Qué desea hacer**, seleccione **Agregar una aplicación que mi organización está desarrollando**.
-6.  En la página **Háblenos acerca de su aplicación**, especifique **iOS-Watch** para el nombre de la aplicación y seleccione **APLICACIÓN DE CLIENTE NATIVO** para el tipo.
-7.  Seleccione el icono de flecha en la esquina inferior derecha de la página.
-8.  En la página **Información de la aplicación**, especifique el **URI de redirección**. Para este ejemplo, puede especificar **https://localhost**, y, después, seleccionar el **icono de marca de verificación** en la esquina inferior derecha de la página. Recuerde este valor para la sección **Ejecutar este ejemplo en Xcode**.
-9.  Una vez que la aplicación se ha agregado correctamente, se le dirigirá a la página Inicio rápido de la aplicación. Seleccione **Configurar** en el menú superior.
-10. Desplácese a la sección titulada **Permisos para otras aplicaciones**.
-11. Haga clic en **Agregar aplicación**.
-12. Haga clic en **Microsoft Graph**. 
-13. Haga clic en **el icono de marca de verificación** en la parte inferior de la página.
-14. Desde **Permisos delegados**, seleccione **Iniciar sesión y leer el perfil del usuario**, **Leer los perfiles completos de todos los usuarios** y **Leer calendarios del usuario**.
-15. Haga clic en el botón **Guardar** en la parte inferior de la página.
-16. Copie los valores de **ID de cliente** y **URI de redirección** en la página **Configurar**. Recuerde estos valores para la sección **Ejecutar este ejemplo en Xcode**.
+9. Haga clic en **Seleccionar**.
 
-## Ejecutar este ejemplo en Xcode
+
+## <a name="running-this-sample-in-xcode"></a>Ejecutar este ejemplo en Xcode
 
 1. Clone este repositorio.
 2. Use CocoaPods para importar la dependencia de autenticación ADAL. Esta aplicación de ejemplo ya contiene un podfile que recibirá los pods en el proyecto. Simplemente vaya al proyecto desde **Terminal** y ejecute:
 
         pod install
 
-     Para obtener más información, consulte **Usar CocoaPods** en [Recursos adicionales](#recursos-adicionales)
+     Para obtener más información, consulte **Usar CocoaPods** en [Recursos adicionales](#AdditionalResources)
 
 3. Abra **iOS-ObjectiveC-MicrosoftGraph-WatchSample.xcworkspace**
-4. Abra **ViewController.m**. Verá que el **ID de cliente** y **URI de redirección** del proceso de registro se pueden añadir a la parte superior del archivo:
+4. Abra **ViewController.m**. Verá que el **ID de cliente** (el identificador de aplicación que obtuvo en la sección de requisitos previos) y la **URI de redirección** del proceso de registro se pueden agregar a la parte superior del archivo:
 
         // You will set your application's clientId and redirect URI.
         NSString * const kRedirectUri = @"ENTER_REDIRECT_URI_HERE";
@@ -58,15 +55,13 @@ Por último, este es un trabajo en curso y nos encantaría que pudiese colaborar
         NSString * const kAuthority   = @"https://login.microsoftonline.com/common";
         NSString * const kResourceId  = @"https://graph.microsoft.com";
 
-5. Ejecute el ejemplo y compruebe de que el destino se establece en el esquema de WatchKit App iPhone/Apple Watch.
-![Destino](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/target.jpg)
-6. Asegúrese de que la aplicación de iOS y los simuladores de la aplicación son visibles. En la aplicación de teléfono, haga clic en *Conectar* y deberá autenticar una cuenta de correo profesional. Proporcione sus credenciales.
-![Autenticación](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/Authentication.jpg)
+5. Ejecute el ejemplo y compruebe de que el destino se establece en el esquema de WatchKit App iPhone/Apple Watch. ![Destino](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/target.jpg)
+6. Asegúrese de que la aplicación de iOS y los simuladores de la aplicación son visibles. En la aplicación de teléfono, haga clic en *Conectar* y deberá autenticar una cuenta de correo profesional. Proporcione sus credenciales. ![Autenticación](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/blob/master/Images/Authentication.jpg)
 6. Una vez autenticado, la aplicación del reloj intentará recuperar inmediatamente los eventos recientes del calendario del usuario registrado. Verá un indicador **Recuperando...** en el reloj. Desde allí puede profundizar en la lista de asistentes, encontrar a alguien de interés y ver detalles del perfil: título, administrador, informes directos y las imágenes de perfil.
 
     > Nota: De nuevo, debe tener una reunión creada en los inquilinos de Office 365, con los asistentes con licencia agregados y algunos de sus datos de perfil especificados para que la aplicación devuelva algo. Asegúrese de crear una con su nombre para mostrar y el cargo en la consola de administración de Office 365. Se pueden asignar los subordinados directos y el administrador en el centro de administración de Exchange (destinatarios o buzones) en Office 365. Consulte también el problema relacionado con el token de acceso en la sección **Problemas conocidos**.
 
-##Código de interés
+##<a name="code-of-interest"></a>Código de interés
 
 **Teléfono**
 
@@ -81,24 +76,25 @@ Por último, este es un trabajo en curso y nos encantaría que pudiese colaborar
 *ProfileController*: finalmente se solicitan dos métodos adicionales de Microsoft Graph (**getUserManager, getUserDirects**) para recuperar el administrador, el cargo, los subordinados directos y las imágenes de perfil asociadas del asistente seleccionado.
 
 
-##Problemas conocidos
+##<a name="known-issues"></a>Problemas conocidos
 Este proyecto vuelve a ser un trabajo en curso y en este momento el token de acceso que pasa entre el teléfono y el reloj no se actualiza una vez caducado. De ahora en adelante, en cuanto caduque tendrá que iniciar sesión otra vez. En el simulador, simplemente puede volver a implementar la aplicación, pero si la implementa en un reloj, la aplicación se bloqueará después de que caduque. También puede volver a implementarla en el dispositivo, o apagar la aplicación en segundo plano y volver a iniciarla (abra la aplicación, pulse el botón lateral hasta que aparezca el menú de energía, mantenga presionado el botón lateral de nuevo hasta que desaparezca ese menú y reinicie la aplicación).
 
-## Preguntas y comentarios
+## <a name="questions-and-comments"></a>Preguntas y comentarios
 
 Nos encantaría recibir sus comentarios acerca de la aplicación **Quién es usted**. Puede enviarnos sus preguntas y sugerencias a través de la sección [Problemas](https://github.com/microsoftgraph/iOS-objectiveC-apple-watch-sample/issues) de este repositorio.
 
-Las preguntas generales sobre el desarrollo de Microsoft Graph deben publicarse en [Desbordamiento de pila](http://stackoverflow.com/questions/tagged/Office365+API). Asegúrese de que sus preguntas o comentarios se etiquetan con [Office365] y [MicrosoftGraph].
+Las preguntas generales sobre el desarrollo de Microsoft Graph deben publicarse en [Stack Overflow](http://stackoverflow.com/questions/tagged/Office365+API). Asegúrese de que sus preguntas o comentarios se etiquetan con [Office365] y [MicrosoftGraph].
 
-## Colaboradores
+## <a name="contributing"></a>Colaboradores
 Deberá firmar un [Contrato de licencia de colaborador](https://cla.microsoft.com/) antes de enviar la solicitud de incorporación de cambios. Para completar el Contrato de licencia de colaborador (CLA), deberá enviar una solicitud mediante el formulario y, después, firmar electrónicamente el CLA cuando reciba el correo electrónico que contiene el vínculo al documento.
 
 Este proyecto ha adoptado el [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) (Código de conducta de código abierto de Microsoft). Para obtener más información, consulte las [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) (Preguntas más frecuentes del código de conducta) o póngase en contacto con [opencode@microsoft.com](mailto:opencode@microsoft.com) con otras preguntas o comentarios.
 
-## Recursos adicionales
+## <a name="additional-resources"></a>Recursos adicionales
 
 * [Página de información general de Microsoft Graph](https://graph.microsoft.io)
 * [Usar CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
 
-## Copyright
+## <a name="copyright"></a>Copyright
 Copyright (c) 2016 Microsoft. Todos los derechos reservados.
+
