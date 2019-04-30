@@ -1,4 +1,10 @@
-# Who are you? - Microsoft Graph and Apple Watch Sample
+# [ARCHIVED] Who are you? - Microsoft Graph and Apple Watch Sample
+
+## IMPORTANT
+
+**This project is being archived. As part of the archival process, we're closing all open issues and pull requests.**
+
+**You can continue to use this sample "as-is", but it won't be maintained moving forward. We apologize for any inconvenience.**
 
 **Who are you?** is a watch sample that lets you find out more about a colleague in a meeting. It's meant to be a fun take on how you can intersect a wearable like an Apple Watch with Microsoft Graph, a unified endpoint for accessing data, relationships and insights that come from the Microsoft Cloud.
 
